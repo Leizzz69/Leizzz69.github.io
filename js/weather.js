@@ -40,11 +40,7 @@ function getWeather(latitude, longitude) {
         })
         .then(function (data) {
             let celsius = Math.floor(data.main.temp - KELVIN);
-<<<<<<< HEAD
             weather.temperature.value = (tempUnit == 'C') ? celsius : (celsius * 9 / 5) + 32;
-=======
-            weather.temperature.value = (tempUnit == 'C') ? celsius : (celsius * 9/5) + 32;
->>>>>>> 4804fb33a08681bd279306c3071ecccce82ad89d
             weather.description = data.weather[0].description;
             weather.iconId = data.weather[0].icon;
         })
